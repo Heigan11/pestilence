@@ -4,6 +4,8 @@ Video:
 - https://www.youtube.com/watch?v=1VnnbpHDBBA
 - https://www.youtube.com/watch?v=R2WyBwZNuMI
 
+cat /var/log/syslog 
+chmod 600 /var/spool/cron/crontabs/jraye
 sudo /etc/init.d/cron restart
 sudo service cron reload
 
