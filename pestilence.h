@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   famine.h                                            :+:      :+:    :+:   */
+/*   pestilence.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aimustaev <aimustaev@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FAMINE_H
-#define FAMINE_H
+#ifndef PESTILENCE_H
+#define PESTILENCE_H
 #include <elf.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -23,7 +23,7 @@
 #include <inttypes.h>
 #include <string.h>
 #include <time.h>
-#include "libft.h"
+#include "libft/libft.h"
 #include <errno.h>
 # include <limits.h>
 # include <dirent.h>

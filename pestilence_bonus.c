@@ -1,4 +1,4 @@
-#include "famine.h"
+#include "pestilence.h"
 
 void do_virus(char* dirName, t_woody *woody, char *path)
 {

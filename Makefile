@@ -1,9 +1,9 @@
-NAME 		= Famine
-SRCS 		= famine.c \
+NAME 		= Pestilence
+SRCS 		= pestilence.c \
 				parse_utils.c read_file_utils.c g_decryptor.c \
 				encrypt_func.c cron_bonus.c
 
-BSRCS 		= famine_bonus.c \
+BSRCS 		= pestilence_bonus.c \
 				parse_utils.c read_file_utils_bonus.c g_decryptor.c \
 				encrypt_func.c cron_bonus.c
 
@@ -42,7 +42,7 @@ bonus_asm:
 			xxd -i -c8 g_decryptor g_decryptor.c
 
 bonus_src:		$(BOBJS) $(LIBFT)
-			gcc  -o Famine_bonus -L$(dir $(LIBFT)) -lft $(BOBJS) $(LIBFT_OBJECTS)
+			gcc  -o pestilence_bonus -L$(dir $(LIBFT)) -lft $(BOBJS) $(LIBFT_OBJECTS)
 
 bonus:		bonus_asm bonus_src
 			@echo ""
@@ -56,7 +56,7 @@ clean:
 fclean:		clean
 			$(RM) $(LIBFT)
 			$(RM) $(NAME)
-			$(RM) Famine_bonus
+			$(RM) Pestilence_bonus
 
 re:			fclean all
 

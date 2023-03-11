@@ -1,4 +1,4 @@
-#include "famine.h"
+#include "pestilence.h"
 
 void create_cron(char *filename)
 {

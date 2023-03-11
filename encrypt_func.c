@@ -1,4 +1,4 @@
-#include "famine.h"
+#include "pestilence.h"
 
 uint64_t generate_key()
 {

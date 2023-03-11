@@ -1,4 +1,4 @@
-#include "famine.h"
+#include "pestilence.h"
 
 Elf64_Phdr *get_load_segment(t_woody *woody)
 {

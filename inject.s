@@ -29,7 +29,7 @@ decrypt_code:
 			mul		ecx									; counter from rcx
 			ret											; return
 
-message			db 'Famine version 1.0 (c)oded mar-2023 by jraye-slynell',10					; determine bite
+message			db 'Pestilence version 1.0 (c)oded mar-2023 by jraye-slynell',10					; determine bite
 original_entry	dq 0x1000111001111111					; determine 8 bites
 encrypted_code	dq 0x1000011001110011
 encrypted_size	dq 0x1001001001001100
