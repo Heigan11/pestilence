@@ -65,9 +65,6 @@ int check_empty_space(t_woody *woody)
 
 int parse_info(t_woody *woody)
 {
-
-	void *cryptopoint_start;
-
 	woody->ehdr = (Elf64_Ehdr *)woody->addr;
 	woody->segments = (Elf64_Phdr *)(woody->addr + woody->ehdr->e_phoff);
 	woody->sections = (Elf64_Shdr *)(woody->addr + woody->ehdr->e_shoff);

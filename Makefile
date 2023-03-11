@@ -13,7 +13,7 @@ LIBFT		= ./libft/libft.a
 LIBFT_SOURCES := $(shell find libft -name "*.c")
 LIBFT_OBJECTS := $(LIBFT_SOURCES:.c=.o)
 # CFLAGS		= -Wall -Werror -Wextra -I$(dir $(LIBFT)) -MMD
-CFLAGS		= -Werror -I$(dir $(LIBFT)) -MMD
+CFLAGS		= -Wall -Werror -Wextra -I$(dir $(LIBFT)) -MMD
 CC			= gcc
 
 all:		$(NAME)

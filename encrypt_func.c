@@ -32,11 +32,9 @@ int change_load_segment(t_dset *dset, t_woody *woody)
 void encrypt_text_section(t_woody *woody, void *data, uint64_t key)
 {
 	size_t size;
-	uint64_t key_copy; // unsigned long long // 8 bite (64 bits)
 	uint64_t value;
 
 	size = woody->text->sh_size;
-	key_copy = key;
 	for (size_t i = 0; i < size; i++)
 	{
 		*(unsigned char *)(data + i) = *(unsigned char *)(data + i) ^ (key & 0b11111111); // get last 8 bits of the value // The least significant byte is the 8-bits at the right-hand side.

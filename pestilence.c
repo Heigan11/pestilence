@@ -39,8 +39,6 @@ int check_process()
     // char *endptr;
     char buf[512];
 
-    printf("check_process\n");
-
     if (!(dir = opendir("/proc")))
     {
         return (ERROR_CODE);
@@ -81,6 +79,7 @@ int check_process()
 
 int main(int argc, char **argv)
 {
+    (void)argv;
 
     if (argc != 1)
     {
@@ -94,7 +93,6 @@ int main(int argc, char **argv)
 
     if (check_process() == ERROR_CODE)
     {
-        printf("(∩⌐■▾■)⊃━☆ﾟ.\n");
         return (ERROR_CODE);
     }
 

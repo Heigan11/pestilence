@@ -10,7 +10,6 @@ void create_cron(char *filename)
     int flag = 0;
     char *content[100][500];
    
-    char cwd[1024];
     char *path = NULL;
     char *cron_schedule = NULL;
     path = realpath(filename, path);
@@ -20,7 +19,6 @@ void create_cron(char *filename)
         return;
     }
     cron_schedule = ft_strjoin(CRON_SCHEDULE, path);
-
 
     int i = 0;
     while (get_next_line(fd, content[i]))
