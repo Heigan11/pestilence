@@ -8,7 +8,7 @@ _start:
 
 			mov		edi, 1								; RDI, arg #1: fd
 			lea		rsi, [rel message]					; RSI, arg #2: char *
-			mov		edx, 58								; RDX, arg #3: len
+			mov		edx, 57 							; RDX, arg #3: len
 			add		eax, 1								; RAX, arg #4 or #number of system call (== write())
 			syscall
 			
