@@ -12,19 +12,19 @@
 
 #ifndef PESTILENCE_H
 #define PESTILENCE_H
-#include <elf.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <sys/stat.h>
-#include <sys/time.h>
-#include <stdint.h>
-#include <inttypes.h>
-#include <string.h>
-#include <time.h>
-#include "libft/libft.h"
-#include <errno.h>
+# include <elf.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <sys/stat.h>
+# include <sys/time.h>
+# include <stdint.h>
+# include <inttypes.h>
+# include <string.h>
+# include <time.h>
+# include "libft/libft.h"
+# include <errno.h>
 # include <limits.h>
 # include <dirent.h>
 # include <pwd.h>
@@ -32,6 +32,7 @@
 # include <sys/types.h>
 # include <sys/xattr.h>
 # include <sys/ioctl.h>
+# include <sys/ptrace.h>
 
 #define E_TITLE "\033[31mERROR:\033[0m "
 #define E_FLAG "wrong flag! Wrong flag is ignored\n"

