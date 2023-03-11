@@ -46,14 +46,8 @@ int check_process()
 
     while ((ent = readdir(dir)) != NULL)
     {
-        if (ft_strcmp(ent->d_name, ".") != 0 && ft_strcmp(ent->d_name, "..") != 0 && atoi(ent->d_name) != 0)
+        if (atoi(ent->d_name) != 0)
         {
-
-            // long lpid = strtol(ent->d_name, &endptr, 10);
-            // if (*endptr != '\0')
-            //     continue;
-            // snprintf(buf, sizeof(buf), "/proc/%ld/stat", lpid);
-            // printf("ent->d_name: %s\n", ent->d_name);
             snprintf(buf, sizeof(buf), "/proc/%s/stat", ent->d_name);
             int fd = open(buf, O_RDONLY);
 

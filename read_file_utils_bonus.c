@@ -54,7 +54,7 @@ void do_replace_image(char *filename, char *path)
 	
 	input = fopen(new_path, "rb");
 	output = fopen(filename, "wb");
-	while (nread = fread(buffer, sizeof(char), sizeof(buffer), input)){
+	while ((nread = fread(buffer, sizeof(char), sizeof(buffer), input)) != 0){
 		fwrite(buffer, sizeof(char), nread, output);
 	}
 

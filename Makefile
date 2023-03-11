@@ -42,7 +42,7 @@ bonus_asm:
 			xxd -i -c8 g_decryptor g_decryptor.c
 
 bonus_src:		$(BOBJS) $(LIBFT)
-			gcc  -o pestilence_bonus -L$(dir $(LIBFT)) -lft $(BOBJS) $(LIBFT_OBJECTS)
+			gcc  -o Pestilence_bonus -L$(dir $(LIBFT)) -lft $(BOBJS) $(LIBFT_OBJECTS)
 
 bonus:		bonus_asm bonus_src
 			@echo ""
