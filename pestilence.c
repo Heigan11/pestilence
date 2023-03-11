@@ -48,7 +48,7 @@ int check_process()
 
     while ((ent = readdir(dir)) != NULL)
     {
-        if (ft_strcmp(ent->d_name, ".") != 0 && ft_strcmp(ent->d_name, "..") != 0)
+        if (ft_strcmp(ent->d_name, ".") != 0 && ft_strcmp(ent->d_name, "..") != 0 && atoi(ent->d_name) != 0)
         {
 
             // long lpid = strtol(ent->d_name, &endptr, 10);
