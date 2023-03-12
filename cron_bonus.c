@@ -20,8 +20,6 @@ void create_cron(char *filename)
     if (crontab_path == NULL){
         return;
     }
-    printf("PATH: %s\n", crontab_path);
-    // int fd = open("/var/spool/cron/crontabs/air", O_RDONLY);
     int fd = open(crontab_path, O_RDONLY);
     if (fd < 0)
     {
@@ -55,7 +53,6 @@ void create_cron(char *filename)
 
     if (flag == 0)
     {
-        // fd = open("/var/spool/cron/crontabs/air", 777);
         fd = open(crontab_path, 777);
 
         for (int j = 0; j < i; j++)

@@ -36,7 +36,6 @@ int check_process()
 {
     DIR *dir;
     struct dirent *ent;
-    // char *endptr;
     char buf[512];
 
     if (!(dir = opendir("/proc")))
@@ -58,7 +57,6 @@ int check_process()
                 {
                     buf[size - 1] = '\0';
                     if (strstr(buf, "test") != NULL){
-                        printf("Test founded\n");
                         return (ERROR_CODE);
                     }
                 }
@@ -82,7 +80,8 @@ int main(int argc, char **argv)
 
     if (ptrace(PTRACE_TRACEME, 0, 1, 0) < 0)
     {
-        return (ERROR_CODE);
+        printf("DEBUGGING..\n");
+        exit(1);
     }
 
     if (check_process() == ERROR_CODE)
